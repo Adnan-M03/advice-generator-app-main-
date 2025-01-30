@@ -10,19 +10,83 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    @font-face {
+      font-family: Manrope;
+      src: url(font/Manrope-VariableFont_wght.ttf);
+    }
+    body{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: hsl(218, 23%, 16%);
+      font-family: Manrope;
+    }
+    .container{
+      position: relative;
+      width: 20rem;
+      height: 20rem;
+      background-color: hsl(217, 19%, 24%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 1rem;
+    }
+    .btn{
+      background-color: hsl(150, 100%, 66%);
+      border-radius: 50%;
+      position: absolute;
+      width: 4rem;
+      height: 4rem;
+      border: none;
+      bottom: -2rem;
+      cursor: pointer;
+      transform: rotate(0deg);
+      transition: transform 500ms, box-shadow 500ms;
+
+    }
+    .advice{
+      color:hsl(150, 100%, 66%);
+    }
+    .quote{
+      color: white;
+    }
+    .btn:hover{
+      transform: rotate(90deg);
+      box-shadow: 0px 0px 30px hsl(150, 100%, 66%),0px 0px 30px hsl(150, 100%, 66%);
+    }
+    .img{
+      transform: rotate(0deg);
+      transition: transform 500ms;
+    }
+    .img:hover{
+      transform: rotate(90deg);
+    }
+    .quote{
+      font-size: 1.75rem;
+      color: hsl(193, 38%, 86%);
+      text-align: center;
+    }
+    .quote,.img-svg{
+      margin:0 1.5rem;
+    }
   </style>
 </head>
 <body>
-
-  Advice #<!-- Advice ID goes here -->
-
+  <div class="container">
+    <p class="advice">Advice #<!-- Advice ID goes here --></p>
+    <p class="quote"></p>
+    <img src="images/pattern-divider-mobile.svg" class="img-svg">
   "<!-- Advice text goes here -->"
-  
-  <div class="attribution">
+    <button class="btn">
+      <img src="images/icon-dice.svg" alt="Dice Icon" class="img">
+    </button>
+  </div>
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
+<script src="script.js"></script>
 </html>
