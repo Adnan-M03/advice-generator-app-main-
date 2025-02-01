@@ -23,19 +23,19 @@ function advice(){
                 const advice = data.slip.advice;
                 paraQuote.textContent = `"${advice}"`;
                 count += 1;
-                paraCount.textContent = `Advice #${random(1,200)}`;
+                paraCount.textContent = `ADVICE #${random(1,200)}`;
                 btn.style.backgroundColor = 'hsl(150, 100%, 66%)';
                 img.style.transform = 'rotatey(180deg)';
             })
             .catch(err =>{
                     console.error(err);
             })
-        console.log('event');
 
 }
 
 btn.addEventListener('click', ()=>{
     advice()
+    console.log('event');
 });
 advice()
 
