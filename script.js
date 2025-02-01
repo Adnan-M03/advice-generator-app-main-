@@ -9,8 +9,10 @@ function random(min,max){
    }
 function advice(){
     let fetchfiles = fetch('https://api.adviceslip.com/advice');
-    btn.style.backgroundColor = 'grey';
-    img.style.transform = 'rotatey(90deg)';
+    btn.disabled = true;
+    setTimeout(()=>{
+        btn.disabled = false;
+    }, 2 * 1000)
         fetchfiles
         .then(response => {
             if(response.status !== 200){
@@ -24,8 +26,6 @@ function advice(){
                 paraQuote.textContent = `"${advice}"`;
                 count += 1;
                 paraCount.textContent = `ADVICE #${random(1,200)}`;
-                btn.style.backgroundColor = 'hsl(150, 100%, 66%)';
-                img.style.transform = 'rotatey(180deg)';
             })
             .catch(err =>{
                     console.error(err);

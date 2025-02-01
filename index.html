@@ -35,6 +35,9 @@
       border-radius: 1rem;
     }
     .btn{
+      display: flex;
+      justify-content: center;
+      align-items:center;
       background-color: hsl(150, 100%, 66%);
       border-radius: 50%;
       position: absolute;
@@ -61,10 +64,7 @@
       transform: rotate(90deg);
       box-shadow: 0px 0px 35px hsl(150, 100%, 66% ,.4),0px 0px 35px hsl(150, 100%, 66% ,.4);
     }
-    .img{
-      transform: rotate(0deg);
-      transition: transform 500ms;
-    }
+    
     .img:hover{
       transform: rotate(90deg);
     }
@@ -79,6 +79,12 @@
     .img-svg{
       margin: 3rem 1rem;
       margin-bottom: 3rem;
+    }
+    .btn:disabled {
+      transform: scale(.8);
+      background-color: #cccccc; /* Grey */
+      cursor:default;
+      box-shadow: none;
     }
   </style>
 </head>
