@@ -24,13 +24,14 @@
     }
     .container{
       position: relative;
-      width: 20rem;
-      height: 20rem;
+      max-width: 33.75rem;
+      min-height: max-content;
+      margin: 0 .875rem;
       background-color: hsl(217, 19%, 24%);
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      justify-content:space-around;
       border-radius: 1rem;
     }
     .btn{
@@ -48,13 +49,17 @@
     }
     .advice{
       color:hsl(150, 100%, 66%);
+      letter-spacing: 4px;
+      font-size: .78rem;
+      font-weight: 800;
+      margin-top: 2rem;
     }
     .quote{
       color: white;
     }
     .btn:hover{
       transform: rotate(90deg);
-      box-shadow: 0px 0px 30px hsl(150, 100%, 66%),0px 0px 30px hsl(150, 100%, 66%);
+      box-shadow: 0px 0px 35px hsl(150, 100%, 66% ,.4),0px 0px 35px hsl(150, 100%, 66% ,.4);
     }
     .img{
       transform: rotate(0deg);
@@ -67,18 +72,25 @@
       font-size: 1.75rem;
       color: hsl(193, 38%, 86%);
       text-align: center;
+      margin: 0 1rem;
+      font-weight: 800;
+      margin-top: 2rem;
     }
-    .quote,.img-svg{
-      margin:0 1.5rem;
+    .img-svg{
+      margin: 3rem 1rem;
+      margin-bottom: 3rem;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <p class="advice">Advice #<!-- Advice ID goes here --></p>
+    <p class="advice">ADVICE #<!-- Advice ID goes here --></p>
     <p class="quote"></p>
-    <img src="images/pattern-divider-mobile.svg" class="img-svg">
-  "<!-- Advice text goes here -->"
+    <img srcset="images/pattern-divider-mobile.svg 420w,
+    images/pattern-divider-desktop.svg 620w" 
+    sizes="(max-width:400px) 420px,
+    620px";
+    src="images/pattern-divider-desktop.svg"  alt="Divider Svg"  class="img-svg">
     <button class="btn">
       <img src="images/icon-dice.svg" alt="Dice Icon" class="img">
     </button>
